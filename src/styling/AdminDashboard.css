@@ -1,0 +1,22 @@
+/* 
+wrapper clr #eff0f5;
+font theme clr #f36f36
+hover btn #29e6a7
+footer #f4f4f6;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: hsl(240, 10%, 96%);
+}
+
+.admin-container {
+  background-color: hsl(0, 20%, 98%);
+  box-shadow: inset 0 0 6px 4px hsl(0, 0%, 94%);
+  padding: 4rem 2rem;
+  display: flex;
+}

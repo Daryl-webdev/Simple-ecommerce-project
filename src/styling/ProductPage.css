@@ -1,0 +1,20 @@
+/* 
+wrapper clr #eff0f5;
+font theme clr #f36f36
+hover btn #29e6a7
+footer #f4f4f6;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*/
+
+.sidebar-container {
+  padding: 2rem;
+}
+
+.nonadmin-filter {
+  font-size: 12px;
+}
+
+.nonadmin-label {
+  font-size: 10px;
+  text-transform: capitalize;
+}

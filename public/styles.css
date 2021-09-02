@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* nav bar */
+.nav-link {
+  color: hsl(250, 6%, 50%) !important;
+  font-size: 12px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.nav-link:hover {
+  color: #f57224 !important;
+  font-weight: 500 !important;
+}
+
+.nav-container {
+  height: 25px;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* navbar-div */
+.navbar-div {
+  padding-bottom: 3rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+}
+
+/* searchBar */
+.searchBarDiv {
+  position: relative;
+  margin-top: 20px;
+  max-height: 50px;
+  max-width: 30rem;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text-input[type="text"] {
+  border: none;
+  width: 55rem;
+  height: 3rem;
+  border-radius: 3px 0 0 3px;
+  background-color: hsl(0, 0%, 90%);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-input[type="text"]:focus {
+  box-shadow: none !important;
+  background-color: hsl(0, 0%, 90%);
+}
+.search-icon-div {
+  border-radius: 0 3px 3px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  padding: 0 1.1rem;
+  cursor: pointer;
+  background-color: #f57224;
+  color: white;
+}
+
+/* searbar-wrapper */
+
+/* login div */
+.login-div {
+  padding: 2rem 2rem !important;
+  width: 48rem !important;
+  background-color: white;
+}
+
+/* .login-wrapper */
+.login-wrapper {
+  padding: 5rem 0;
+  background-color: #eff0f5;
+  width: 100%;
+}
+
+.google-btn-div {
+  padding-bottom: 50px;
+  margin: 0 auto;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.google-btn,
+.my-facebook-button-class {
+  border: none;
+  font-family: "Roboto", sans-serif;
+  color: white !important;
+  max-width: 35rem !important;
+  margin: 10px 0;
+  border-radius: 3px;
+}
+.google-btn {
+  background-color: #d34836 !important;
+}
+.google-btn:hover {
+  background-color: hsl(245, 48%, 5%) !important;
+}
+.my-facebook-button-class {
+  padding: 10px 15px;
+  background-color: #3936d3 !important;
+}
+
+.my-facebook-button-class:hover {
+  background-color: hsl(245, 48%, 5%) !important;
+}
+
+label[for="loginEmail"],
+[for="loginPassword"] {
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  color: hsl(0, 0%, 20%);
+}
+
+/* 
+.myContainer {
+  margin-bottom: 10rem;
+}
+Button {
+  background-color: #b71856 !important;
+  border: none !important;
+}
+.jumbo {
+  margin: 0 -15px;
+  box-shadow: 0 0 3px 0 grey;
+}
+
+.div-style,
+.cardHighlight {
+  border-radius: 10px;
+  min-height: 100%;
+  border-style: none !important;
+  box-shadow: 1px 2px 6px 0 rgba(14, 14, 14, 0.2);
+}
+
+.div-style-form {
+  padding: 40px 40px !important;
+  width: 35rem !important;
+  min-height: 30rem !important;
+}
+.bg-table {
+  background-color: #b71856 !important;
+}
+
+.archive,
+.update {
+  padding: 5px 5px !important;
+  font-size: 10px !important;
+}
+
+.enable {
+  background-color: green !important;
+}
+
+.disable {
+  background-color: red !important;
+} */
+
+/* Register form */

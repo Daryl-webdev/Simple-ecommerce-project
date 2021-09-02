@@ -1,0 +1,60 @@
+/* 
+wrapper clr #eff0f5;
+font theme clr #f36f36
+hover btn #29e6a7
+footer #f4f4f6;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*/
+
+body {
+  box-sizing: border-box;
+}
+
+.register-div {
+  padding: 2rem 1rem !important;
+  margin: 0 auto;
+  width: 55rem !important;
+  background-color: white;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+/* .login-wrapper */
+.register-wrapper {
+  padding: 2rem 0;
+  background-color: #eff0f5;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.col {
+  float: left !important;
+  width: 48% !important;
+}
+
+label {
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  color: hsl(0, 0%, 20%);
+  margin: 0 !important;
+}
+
+input {
+  margin: 0 !important;
+  font-size: 12px !important;
+}
+
+.icon-div {
+  height: 100%;
+  right: 0;
+  cursor: pointer;
+}
+
+.register-validation {
+  position: absolute;
+  bottom: 1.5rem;
+  font-size: 0.8rem;
+  right: 20%;
+  list-style-type: disc;
+}

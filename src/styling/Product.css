@@ -1,0 +1,77 @@
+/* 
+wrapper clr #eff0f5;
+font theme clr #f36f36
+hover btn #29e6a7
+footer #f4f4f6;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*/
+
+body {
+  color: #4f546c;
+}
+.wrapper {
+  margin: 2rem;
+  display: grid !important;
+  gap: 1rem !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+}
+
+.card-container {
+  box-shadow: 0 0 10px 5px #e1e5ee !important;
+  border-radius: 0.9rem !important;
+  width: 14rem !important;
+}
+
+.image {
+  width: 14rem !important;
+  height: 10rem !important;
+  object-fit: unset !important;
+}
+
+.body {
+  margin: 1rem !important;
+}
+
+.title {
+  line-height: 1.4rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.description {
+  line-height: 1.2rem;
+  font-size: 12px;
+  font-weight: 400;
+  min-height: 2.8rem;
+}
+
+.price {
+  font-size: 1rem;
+  color: #f36f36;
+  font-weight: 600;
+}
+
+.card-btn {
+  border: none;
+  border-top: 1px solid #e1e5ee;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  color: #0e48fe;
+}
+.card-btn:hover {
+  color: #29e6a7;
+}
+
+.card-btn-container {
+  position: relative;
+}
+.cart-icon {
+  position: absolute;
+  left: 10px;
+  color: #f36f36;
+}
+.cart-icon:hover {
+  color: #29e6a7;
+}

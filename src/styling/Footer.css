@@ -1,0 +1,68 @@
+/* 
+wrapper clr #eff0f5;
+font theme clr #f36f36
+hover btn #29e6a7
+footer #f4f4f6;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #ffff;
+}
+/* For welcome login page */
+.welcome {
+  display: flex;
+  justify-content: center;
+  /* margin-left: 17.8rem; */
+  padding-bottom: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.footer-container {
+  padding: 1rem 6rem;
+  background-color: #f4f4f6;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-heading {
+  font-size: 15px !important;
+  color: hsl(237, 38%, 40%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+li > a {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: hsl(237, 38%, 48%);
+}
+
+li {
+  line-height: 1rem;
+}
+
+.google {
+  width: 10rem;
+}
+
+.download-container > p {
+  padding: 0 10px;
+  top: 5px;
+  position: relative;
+  line-height: 0.2rem;
+  max-height: 2rem;
+}
+
+.download-container p:first-child {
+  color: #f36f36;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
