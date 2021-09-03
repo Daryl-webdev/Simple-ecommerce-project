@@ -8,6 +8,7 @@ import AdminView from "../components/AdminView";
 import UserView from "../components/UserView";
 
 export default function ProductPage() {
+  console.log(process.env.REACT_APP_API_URL);
   const { user, isLoading, setIsLoading } = useContext(UserContext);
   const [allProducts, setAllProducts] = useState([]);
 
