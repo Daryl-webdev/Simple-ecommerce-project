@@ -4,7 +4,7 @@ import Login from "../components/Login";
 function LoginPage() {
   return (
     <div className="login-wrapper">
-      <h4 className="welcome">Welcome to Pazada! Please login</h4>
+      <h5 className="welcome">Welcome to Pazada! Please login</h5>
       <Login />
     </div>
   );

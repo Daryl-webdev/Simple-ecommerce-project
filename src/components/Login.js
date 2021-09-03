@@ -6,13 +6,14 @@ import UserContext from "../UserContext";
 import GoogleLogin from "react-google-login";
 import FacebookLogin from "react-facebook-login";
 import axios from "axios";
+import "../styling/Login.css";
 
 const Login = () => {
   const responseFacebook = (response) => {
     console.log(response);
     axios({
       method: "POST",
-      url: `${process.env.REACT_APP_API_URL}users/facebook-login`,
+      url: `${process.env.REACT_APP_API_URL}/users/facebook-login`,
       data: { accessToken: response.accessToken, userID: response.userID },
     })
       .then((res) => res.data)
@@ -131,6 +132,7 @@ const Login = () => {
 
   function loginUser(e) {
     e.preventDefault();
+    console.log(process.env.REACT_APP_API_URL);
     let newBody = {
       password: password,
     };

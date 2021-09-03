@@ -20,6 +20,17 @@
   font-weight: 500 !important;
 }
 
+.welcome {
+  display: block;
+  width: 48rem;
+  align-self: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 .nav-container {
   height: 25px;
   background-color: hsl(0, 0%, 95%);
@@ -83,7 +94,7 @@
 
 /* .login-wrapper */
 .login-wrapper {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #eff0f5;
   width: 100%;
 }

@@ -21,11 +21,10 @@ body {
 
 /* .login-wrapper */
 .register-wrapper {
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   background-color: #eff0f5;
   max-width: 100%;
   overflow: hidden;
-  height: 100vh;
 }
 
 .col {
