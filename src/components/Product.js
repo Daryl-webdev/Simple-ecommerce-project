@@ -53,7 +53,9 @@ export default function Product({ productProps }) {
         <h5 clasName="product-name">{name}</h5>
         <p className="description">{`${description.substr(0, 50)}...`}</p>
         <p className="d-none">{category}</p>
-        <p className="price">₱ {price.toLocaleString()}.00</p>
+        <p className="price">
+          ₱ {price.toLocaleString()}.00 <small>x{}</small>
+        </p>
         <div className="card-btn-container">
           <Link to={`/product/${_id}`}>
             <button className="card-btn">
