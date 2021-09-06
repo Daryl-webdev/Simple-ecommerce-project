@@ -1,3 +1,23 @@
+#Started date August 31 2021
+
+This is my First Full Stack project using MERN.
+
+#Available functionalities
+
+-login authentication
+-login form validation(client side)
+-registration
+-add to cart
+-purchase products
+-search product
+-FULL CRUD on Admin side
+-Upload dynamic images
+-google auth
+-facebook auth
+-and more features to come
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
