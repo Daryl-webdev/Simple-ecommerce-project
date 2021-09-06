@@ -26,12 +26,16 @@ export default function Orders({ orderProps }) {
           50
         )}...`}</p>
         <p className="d-none">category</p>
-        <p className="price">₱ {productPrice}</p>
+        <p className="price">
+          ₱ {productPrice}
+          <small> x{productQty}</small>
+        </p>
+
         <small>Total ₱{totalAmount}</small>
 
-        <Link to={`/product/${productId}`}>
+        {/* <Link to={`/product/${productId}`}>
           <button className="card-btn">Details</button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

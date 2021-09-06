@@ -15,6 +15,29 @@ footer #f4f4f6;
 }
 
 .nonadmin-label {
-  font-size: 10px;
+  font-size: 12px;
+
   text-transform: capitalize;
+}
+.home-component {
+  width: 100vw;
+  margin: 0 -10vw;
+}
+.nav-search-div {
+  position: sticky;
+  top: 0;
+}
+.nav-bar-product-div {
+  z-index: 20;
+}
+.search-bar-product-div {
+  position: sticky;
+  top: 1.3rem;
+  z-index: 20;
+  padding: 0 0 1rem 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  margin: 0 -1rem;
 }

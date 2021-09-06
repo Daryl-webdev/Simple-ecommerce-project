@@ -3,8 +3,8 @@ import { Nav, Navbar } from "react-bootstrap";
 import { NavLink, useHistory } from "react-router-dom";
 import UserContext from "../UserContext";
 
-export default function NavBar({ count }) {
-  const { user, unsetUser } = useContext(UserContext);
+export default function NavBar() {
+  const { user, unsetUser, count } = useContext(UserContext);
 
   const history = useHistory();
 
@@ -13,9 +13,18 @@ export default function NavBar({ count }) {
     history.push("/login");
   };
   let rightNav =
-    user.email !== null ? (
+    user.email === null ? (
       <>
-        {user.isAdmin ? (
+        <Nav.Link className="nav-link" as={NavLink} to="/login">
+          Login
+        </Nav.Link>
+        <Nav.Link className="nav-link" as={NavLink} to="/register">
+          Register
+        </Nav.Link>
+      </>
+    ) : (
+      <>
+        {user.isAdmin === true ? (
           <Nav.Link className="nav-link" as={NavLink} to="/all-orders">
             All Orders
           </Nav.Link>
@@ -27,22 +36,13 @@ export default function NavBar({ count }) {
             <Nav.Link className="nav-link" as={NavLink} to="/my-cart">
               <i class="fas fa-shopping-cart">
                 {" "}
-                <span>{count}</span>
+                <span className="badge cart-count">{count}</span>
               </i>
             </Nav.Link>
           </>
         )}
         <Nav.Link className="nav-link" onClick={logout}>
           Logout
-        </Nav.Link>
-      </>
-    ) : (
-      <>
-        <Nav.Link className="nav-link" as={NavLink} to="/login">
-          Login
-        </Nav.Link>
-        <Nav.Link className="nav-link" as={NavLink} to="/register">
-          Register
         </Nav.Link>
       </>
     );

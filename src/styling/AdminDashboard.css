@@ -13,10 +13,73 @@ body {
   margin: 0;
   background-color: hsl(240, 10%, 96%);
 }
-
 .admin-container {
-  background-color: hsl(0, 20%, 98%);
-  box-shadow: inset 0 0 6px 4px hsl(0, 0%, 94%);
-  padding: 4rem 2rem;
-  display: flex;
+  margin-top: 1rem;
+  background-color: white;
+}
+.admin-filter-text {
+  margin-top: 8rem;
+  font-size: 12px;
+}
+.admin-title-container {
+  margin-top: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.2rem;
+  height: 1.5rem;
+}
+
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  border-radius: 1rem;
+}
+
+.slider-right {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  border-radius: 1rem;
+}
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: 4px;
+  bottom: 4px;
+  background: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.slider-right::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  right: 4px;
+  bottom: 4px;
+  background: hsl(140, 50%, 55%);
+  transition: 0.4s;
+  border-radius: 50%;
 }

@@ -6,13 +6,16 @@ export default function UserView({ productData }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const productArr = productData.map((product) => {
-      if (product.isActive) {
-        return <Product key={product._id} productProps={product} />;
-      } else return null;
-    });
+    if (productData) {
+      const productArr = productData.map((product) => {
+        if (product.isActive) {
+          return <Product key={product._id} productProps={product} />;
+        } else return null;
+      });
 
-    setProducts(productArr);
+      setProducts(productArr);
+    } else {
+    }
   }, [productData]);
 
   return <div className="wrapper d-grid">{products}</div>;

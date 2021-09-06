@@ -1,0 +1,40 @@
+.landing {
+  background-color: white;
+  position: relative;
+  height: 100vh;
+  z-index: 3;
+}
+
+.carousel-img {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+.transparent-div {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+  /* background: linear-gradient(rgba(241, 173, 95, 0.2), rgba(233, 165, 18, 0.3)); */
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-transparent-div {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+  border-radius: 3px;
+  box-shadow: inset
+    linear-gradient(rgba(241, 173, 95, 0.2), rgba(233, 165, 18, 0.3));
+  padding: 1rem 2rem;
+  color: white;
+}
+.btn-home {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border: none;
+  padding: 0.8rem 0;
+  background-color: rgb(54, 136, 243);
+}

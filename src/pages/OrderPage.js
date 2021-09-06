@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../components/NavBar";
 import UserOrder from "../components/UserOrder";
 
 export default function OrderPage() {
@@ -12,13 +13,14 @@ export default function OrderPage() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setOrderList(data);
       });
   }, []);
 
   return (
     <div>
+      <NavBar />
+      <h1 className="text-center">Order History</h1>
       <UserOrder orderData={orderList} />
     </div>
   );

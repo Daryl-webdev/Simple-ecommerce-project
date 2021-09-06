@@ -71,13 +71,20 @@ function Footer() {
             </div>
             <div>
               <img
-                src="http://assets.stickpng.com/images/5a902dbf7f96951c82922875.png"
+                src="https://data.ibtimes.sg/en/full/12247/google-play-store-8-1-73-apk.png"
                 alt="logo"
                 className="google"
               />
             </div>
           </div>
         </div>
+      </div>
+      <div className="d-flex flex-column justify-content-center align-items-center mt-2">
+        <p className="footer-disclaimer">
+          Disclaimer: This project has no intention to plagiarize Lazada, this
+          is for Educational Purposes Only
+        </p>
+        <p className="footer-disclaimer">I'm a regular customer of Lazada ❤</p>
       </div>
     </div>
   );

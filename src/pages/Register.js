@@ -3,6 +3,7 @@ import { Form, Button, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../styling/register.css";
+import NavBar from "../components/NavBar";
 
 const Register = () => {
   const history = useHistory();
@@ -110,7 +111,7 @@ const Register = () => {
   //password and verify-password match
 
   useEffect(() => {
-    if (verifyPassword) {
+    if (verifyPassword !== "") {
       if (password && verifyPassword && password !== verifyPassword) {
         setVerifyPasswordValidation("text-danger");
         setVerifyPasswordValidationIcon("fas fa-times-circle");
@@ -207,129 +208,132 @@ const Register = () => {
   }
 
   return (
-    <div className="register-wrapper">
-      <div className="row">
-        <Container className="register-div mt-5">
-          <Form onSubmit={(e) => registerUser(e)}>
-            <div className="col col-lg-6 ">
-              <Form.Group>
-                <Form.Label for="regFirstName"> Firstname: </Form.Label>
-                <Form.Control
-                  id="regFirstName"
-                  type="text"
-                  required
-                  placeholder="first name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Form.Label for="regLastName"> Lastname: </Form.Label>
-                <Form.Control
-                  id="regLastName"
-                  type="text"
-                  required
-                  placeholder="Last name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Form.Label for="regUserName"> Username: </Form.Label>
-                <Form.Control
-                  id="regUserName"
-                  type="text"
-                  required
-                  placeholder="Username"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
-                />
-              </Form.Group>
-            </div>
-            <div className="col col-lg-6 ">
-              <Form.Group>
-                <Form.Label for="regEmail"> Email Adress</Form.Label>
-                <Form.Control
-                  id="regEmail"
-                  type="email"
-                  required
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Form.Group>
-
-              <Form.Group>
-                <Form.Label id="regPassword">Password</Form.Label>
-                <div className="position-relative d-flex">
+    <>
+      <NavBar />
+      <div className="register-wrapper">
+        <div className="row">
+          <Container className="register-div mt-5">
+            <Form onSubmit={(e) => registerUser(e)}>
+              <div className="col col-lg-6 ">
+                <Form.Group>
+                  <Form.Label for="regFirstName"> Firstname: </Form.Label>
                   <Form.Control
-                    id="regPassword"
-                    type={showPassword ? "text" : "password"}
+                    id="regFirstName"
+                    type="text"
                     required
-                    placeholder="Password must be atleast 6 characters"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="first name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                   />
-                  <div className="position-absolute icon-div d-flex justify-content-center align-items-center px-2">
-                    <i
-                      className={showPasswordIcon}
-                      onClick={passwordToggler}
-                    ></i>
-                  </div>
-                </div>
-              </Form.Group>
-              <Form.Group>
-                <Form.Label>Verify password</Form.Label>
-                <div className="position-relative d-flex">
+                </Form.Group>
+
+                <Form.Group>
+                  <Form.Label for="regLastName"> Lastname: </Form.Label>
                   <Form.Control
-                    type={showVerPassword ? "text" : "password"}
+                    id="regLastName"
+                    type="text"
                     required
-                    placeholder="Verify password"
-                    value={verifyPassword}
-                    onChange={(e) => setVerifyPassword(e.target.value)}
+                    placeholder="Last name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                   />
-                  <div className="position-absolute icon-div d-flex justify-content-center align-items-center px-2">
-                    <i
-                      className={showVerPasswordIcon}
-                      onClick={verPasswordToggler}
-                    ></i>
+                </Form.Group>
+
+                <Form.Group>
+                  <Form.Label for="regUserName"> Username: </Form.Label>
+                  <Form.Control
+                    id="regUserName"
+                    type="text"
+                    required
+                    placeholder="Username"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
+                  />
+                </Form.Group>
+              </div>
+              <div className="col col-lg-6 ">
+                <Form.Group>
+                  <Form.Label for="regEmail"> Email Adress</Form.Label>
+                  <Form.Control
+                    id="regEmail"
+                    type="email"
+                    required
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Form.Group>
+
+                <Form.Group>
+                  <Form.Label id="regPassword">Password</Form.Label>
+                  <div className="position-relative d-flex">
+                    <Form.Control
+                      id="regPassword"
+                      type={showPassword ? "text" : "password"}
+                      required
+                      placeholder="Password must be atleast 6 characters"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <div className="position-absolute icon-div d-flex justify-content-center align-items-center px-2">
+                      <i
+                        className={showPasswordIcon}
+                        onClick={passwordToggler}
+                      ></i>
+                    </div>
                   </div>
-                </div>
-              </Form.Group>
-            </div>
-            {registerBtn ? (
-              <Button type="submit" className="ml-3">
-                Submit
-              </Button>
-            ) : (
-              <Button type="submit" className="ml-3" disabled={true}>
-                Submit
-              </Button>
-            )}
-            <small className="mt-3 ml-3 d-block">
-              Already have an account? <Link to="/login">Log in Account</Link>{" "}
-            </small>
-          </Form>
-          <ul className="register-validation">
-            <li className={emailValidation}>
-              Email unique <i class={emailValidationIcon}></i>
-            </li>
-            <li className={userNameValidation}>
-              Username unique <i class={userNameValidationIcon}></i>{" "}
-            </li>
-            <li className={passwordValidation}>
-              Pasword is atleast 6 characters{" "}
-              <i class={passwordValidationIcon}></i>
-            </li>
-            <li className={verifyPasswordValidation}>
-              Password match <i class={verifyPasswordValidationIcon}></i>
-            </li>
-          </ul>
-        </Container>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Verify password</Form.Label>
+                  <div className="position-relative d-flex">
+                    <Form.Control
+                      type={showVerPassword ? "text" : "password"}
+                      required
+                      placeholder="Verify password"
+                      value={verifyPassword}
+                      onChange={(e) => setVerifyPassword(e.target.value)}
+                    />
+                    <div className="position-absolute icon-div d-flex justify-content-center align-items-center px-2">
+                      <i
+                        className={showVerPasswordIcon}
+                        onClick={verPasswordToggler}
+                      ></i>
+                    </div>
+                  </div>
+                </Form.Group>
+              </div>
+              {registerBtn ? (
+                <Button type="submit" className="ml-3">
+                  Submit
+                </Button>
+              ) : (
+                <Button type="submit" className="ml-3" disabled={true}>
+                  Submit
+                </Button>
+              )}
+              <small className="mt-3 ml-3 d-block">
+                Already have an account? <Link to="/login">Log in Account</Link>{" "}
+              </small>
+            </Form>
+            <ul className="register-validation">
+              <li className={emailValidation}>
+                Email unique <i class={emailValidationIcon}></i>
+              </li>
+              <li className={userNameValidation}>
+                Username unique <i class={userNameValidationIcon}></i>{" "}
+              </li>
+              <li className={passwordValidation}>
+                Pasword is atleast 6 characters{" "}
+                <i class={passwordValidationIcon}></i>
+              </li>
+              <li className={verifyPasswordValidation}>
+                Password match <i class={verifyPasswordValidationIcon}></i>
+              </li>
+            </ul>
+          </Container>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

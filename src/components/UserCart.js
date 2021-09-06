@@ -1,17 +1,51 @@
 import React, { useEffect, useState } from "react";
 import Cart from "./Cart";
-
-export default function UserCart({ cartData }) {
+import { Link } from "react-router-dom";
+export default function UserCart({
+  cartData,
+  fetchCartList,
+  fetchCartListTotal,
+}) {
   const [carts, setCarts] = useState([]);
+  const [display, setDisplay] = useState("d-none");
+  const [mainDisplay, setMainDisplay] = useState("");
 
   useEffect(() => {
-    const cartArr = cartData.map((cart) => {
-      if (cart !== null) {
-        return <Cart cartProps={cart} />;
-      } else return null;
-    });
+    if (cartData.error) {
+      setDisplay("d-block no-order-container");
+      setMainDisplay("");
+    } else {
+      setMainDisplay("d-flex flex-column");
+      setDisplay("");
+      const cartArr = cartData.map((cart) => {
+        if (cart !== null) {
+          return (
+            <>
+              <Cart
+                cartProps={cart}
+                fetchCartList={fetchCartList}
+                fetchCartListTotal={fetchCartListTotal}
+              />
+            </>
+          );
+        } else return null;
+      });
 
-    setCarts(cartArr);
+      setCarts(cartArr);
+    }
   }, [cartData]);
-  return <div className="wrapper d-grid">{carts}</div>;
+  return (
+    <div>
+      <div className={mainDisplay}>{carts}</div>
+      <div className={display}>
+        <p className="text-center">You dont have any list in your Cart</p>
+        <p className="text-center">
+          Go Shopping{" "}
+          <Link to="/product">
+            <i class="fas fa-shopping-cart"></i>
+          </Link>
+        </p>
+      </div>
+    </div>
+  );
 }

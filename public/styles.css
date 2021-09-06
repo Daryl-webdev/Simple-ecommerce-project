@@ -6,6 +6,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#root {
+  background-color: #eff0f5;
+  position: relative;
+}
 /* nav bar */
 .nav-link {
   color: hsl(250, 6%, 50%) !important;
@@ -20,30 +24,12 @@
   font-weight: 500 !important;
 }
 
-.welcome {
-  display: block;
-  width: 48rem;
-  align-self: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
 .nav-container {
   height: 25px;
   background-color: hsl(0, 0%, 95%);
 }
 
 /* navbar-div */
-.navbar-div {
-  padding-bottom: 3rem;
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 3;
-}
 
 /* searchBar */
 .searchBarDiv {
@@ -140,48 +126,8 @@ label[for="loginEmail"],
   color: hsl(0, 0%, 20%);
 }
 
-/* 
-.myContainer {
-  margin-bottom: 10rem;
+.cart-count {
+  background-color: #f57224;
+  color: white;
+  font-size: 0.5rem;
 }
-Button {
-  background-color: #b71856 !important;
-  border: none !important;
-}
-.jumbo {
-  margin: 0 -15px;
-  box-shadow: 0 0 3px 0 grey;
-}
-
-.div-style,
-.cardHighlight {
-  border-radius: 10px;
-  min-height: 100%;
-  border-style: none !important;
-  box-shadow: 1px 2px 6px 0 rgba(14, 14, 14, 0.2);
-}
-
-.div-style-form {
-  padding: 40px 40px !important;
-  width: 35rem !important;
-  min-height: 30rem !important;
-}
-.bg-table {
-  background-color: #b71856 !important;
-}
-
-.archive,
-.update {
-  padding: 5px 5px !important;
-  font-size: 10px !important;
-}
-
-.enable {
-  background-color: green !important;
-}
-
-.disable {
-  background-color: red !important;
-} */
-
-/* Register form */

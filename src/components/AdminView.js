@@ -69,22 +69,23 @@ export default function AdminView(props) {
             >
               update
             </Button>
+
             {product.isActive ? (
-              <Button
-                className="archive disable"
-                size="sm"
+              <label
                 onClick={() => archiveToggler(product._id, product.isActive)}
+                className="switch mx-auto d-block mt-2"
               >
-                Disable
-              </Button>
+                <input type="checkbox" />
+                <span className="slider-right"></span>
+              </label>
             ) : (
-              <Button
-                className="archive enable"
-                size="sm"
+              <label
                 onClick={() => archiveToggler(product._id, product.isActive)}
+                className="switch mx-auto d-block mt-2"
               >
-                Enable
-              </Button>
+                <input type="checkbox" />
+                <span className="slider"></span>
+              </label>
             )}
           </td>
         </tr>
@@ -195,11 +196,6 @@ export default function AdminView(props) {
       .then((data) => {
         if (data) {
           fetchData();
-          Swal.fire({
-            title: "Yeeeyyy!!!",
-            icon: "success",
-            text: "Product successfuly archived",
-          });
         } else if (!data) {
           fetchData();
           Swal.fire({
@@ -222,15 +218,15 @@ export default function AdminView(props) {
   const categories = ["Beauty", "Health", "Learnings", "Electronics"];
   return (
     <>
-      <div className="admin-container">
-        <div>
-          <h2>Admin Dashboard</h2>
-          <div className="d-flex justify-content-center">
-            <Button onClick={openAdd}>Add New Product</Button>
-          </div>
+      <div className="admin-title-container">
+        <h2 className="text-center">Admin Dashboard</h2>
+        <div className="d-flex justify-content-center">
+          <Button onClick={openAdd}>Add New Product</Button>
         </div>
+      </div>
+      <div className="admin-container">
         <Table striped hover responsive bordered>
-          <thead className="bg-table text-light">
+          <thead className="bg-table text-light bg-dark">
             <tr>
               <th>Id</th>
               <th>Name</th>
