@@ -63,7 +63,7 @@
     display: none;
   }
 }
-@media all and (max-width: 425px) {
+@media all and (orientation: portrait), (max-width: 425px) {
   .login-close-btn {
     position: relative;
     left: 1rem;
@@ -81,7 +81,7 @@
     display: none;
   }
   .login-div {
-    max-width: 400px;
+    max-width: 370px;
     padding: 0;
     margin-top: 0;
   }
@@ -94,7 +94,7 @@
   }
   .login-wrapper {
     padding: 0;
-    background-color: white;
+    background-color: #ffff;
     max-height: 80vh;
   }
   .google-btn-div {
