@@ -57,3 +57,161 @@ input {
   right: 20%;
   list-style-type: disc;
 }
+
+/* media query */
+@media all and (max-width: 768px) {
+  .register-wrapper {
+    background-color: white;
+    max-height: 100vh;
+  }
+}
+@media all and (max-width: 600px) {
+  .register-wrapper {
+    background-color: white;
+    max-height: 100vh;
+  }
+  .register-nav {
+    display: none;
+  }
+  .register-welcome {
+    font-weight: 600;
+    margin-left: 1rem;
+  }
+  .register-div {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    background-color: white;
+    max-width: 500px;
+  }
+  .register-validation {
+    position: absolute;
+    list-style: none;
+    font-size: 12px;
+    bottom: -1.5rem;
+    left: 2rem;
+  }
+  .register-form {
+    position: relative;
+  }
+  .register-btn {
+    position: absolute;
+    right: 0;
+    font-size: 0.7rem;
+  }
+  .register-text {
+    position: relative;
+    top: 5rem;
+    left: 4rem;
+  }
+}
+@media all and (max-width: 504px) {
+  .register-validation {
+    font-size: 11px;
+    bottom: -1.5rem;
+    left: 3rem;
+  }
+  .register-btn {
+    right: 2rem;
+    font-size: 0.7rem;
+  }
+  .register-text {
+    top: 5rem;
+    left: 1rem;
+  }
+}
+@media all and (max-width: 425px) {
+  .register-div {
+    max-width: 425px;
+  }
+  .register-validation {
+    left: 2rem;
+  }
+  .register-btn {
+    right: 0;
+  }
+  .register-text {
+    position: relative;
+    top: 5rem;
+    left: 2.5rem;
+  }
+}
+@media all and (max-width: 414px) {
+  .register-div {
+    max-width: 414px;
+  }
+  .register-validation {
+    bottom: -1.5rem;
+    left: 2rem;
+  }
+  .register-btn {
+    right: 0;
+    font-size: 0.7rem;
+  }
+}
+@media all and (max-width: 384px) {
+  .register-div {
+    max-width: 384px;
+  }
+}
+@media all and (max-width: 375px) {
+  .register-div {
+    max-width: 375px;
+  }
+  .register-btn {
+    right: 0;
+    font-size: 0.8rem;
+  }
+  .register-validation {
+    font-size: 10px;
+    bottom: -1.5rem;
+    left: 2rem;
+  }
+  .register-text {
+    position: relative;
+    top: 4.5rem;
+    left: 2rem;
+  }
+}
+@media all and (max-width: 360px) {
+  .register-div {
+    max-width: 360px;
+  }
+  .register-text {
+    position: relative;
+    top: 4.5rem;
+    left: 1.7rem;
+    font-size: 0.7rem;
+  }
+}
+@media all and (max-width: 320px) {
+  .register-div {
+    max-width: 320px;
+  }
+}
+@media all and (max-width: 320px), (max-height: 533px) {
+  .register-welcome {
+    font-weight: 300;
+    margin-top: 0;
+  }
+  .register-form-group {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .register-validation {
+    font-size: 8px;
+    bottom: -2.4rem;
+    left: 2rem;
+  }
+  .register-btn {
+    right: 0;
+    bottom: -1rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .register-text {
+    top: 4.5rem;
+    left: 3rem;
+    font-size: 0.5rem;
+  }
+}

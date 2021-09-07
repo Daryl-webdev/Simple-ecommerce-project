@@ -209,13 +209,22 @@ const Register = () => {
 
   return (
     <>
-      <NavBar />
+      <div className="register-nav">
+        <NavBar />
+      </div>
       <div className="register-wrapper">
-        <div className="row">
-          <Container className="register-div mt-5">
-            <Form onSubmit={(e) => registerUser(e)}>
-              <div className="col col-lg-6 ">
-                <Form.Group>
+        <Link to="/product">
+          <p className="login-close-btn d-md-none">
+            <i class="fas fa-angle-left"></i>
+          </p>
+        </Link>
+
+        <Container className="register-div mt-md-5">
+          <p className="register-welcome">Welcome to Pazada</p>
+          <Form className="register-form" onSubmit={(e) => registerUser(e)}>
+            <div className="row">
+              <div className="col-sm-12 col-md-6 ">
+                <Form.Group className="register-form-group">
                   <Form.Label for="regFirstName"> Firstname: </Form.Label>
                   <Form.Control
                     id="regFirstName"
@@ -227,7 +236,7 @@ const Register = () => {
                   />
                 </Form.Group>
 
-                <Form.Group>
+                <Form.Group className="register-form-group">
                   <Form.Label for="regLastName"> Lastname: </Form.Label>
                   <Form.Control
                     id="regLastName"
@@ -239,7 +248,7 @@ const Register = () => {
                   />
                 </Form.Group>
 
-                <Form.Group>
+                <Form.Group className="register-form-group">
                   <Form.Label for="regUserName"> Username: </Form.Label>
                   <Form.Control
                     id="regUserName"
@@ -251,8 +260,8 @@ const Register = () => {
                   />
                 </Form.Group>
               </div>
-              <div className="col col-lg-6 ">
-                <Form.Group>
+              <div className="col-sm-12 col-md-6">
+                <Form.Group className="register-form-group">
                   <Form.Label for="regEmail"> Email Adress</Form.Label>
                   <Form.Control
                     id="regEmail"
@@ -264,7 +273,7 @@ const Register = () => {
                   />
                 </Form.Group>
 
-                <Form.Group>
+                <Form.Group className="register-form-group">
                   <Form.Label id="regPassword">Password</Form.Label>
                   <div className="position-relative d-flex">
                     <Form.Control
@@ -283,7 +292,7 @@ const Register = () => {
                     </div>
                   </div>
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="register-form-group">
                   <Form.Label>Verify password</Form.Label>
                   <div className="position-relative d-flex">
                     <Form.Control
@@ -302,36 +311,41 @@ const Register = () => {
                   </div>
                 </Form.Group>
               </div>
-              {registerBtn ? (
-                <Button type="submit" className="ml-3">
-                  Submit
-                </Button>
-              ) : (
-                <Button type="submit" className="ml-3" disabled={true}>
-                  Submit
-                </Button>
-              )}
-              <small className="mt-3 ml-3 d-block">
-                Already have an account? <Link to="/login">Log in Account</Link>{" "}
-              </small>
-            </Form>
-            <ul className="register-validation">
-              <li className={emailValidation}>
-                Email unique <i class={emailValidationIcon}></i>
-              </li>
-              <li className={userNameValidation}>
-                Username unique <i class={userNameValidationIcon}></i>{" "}
-              </li>
-              <li className={passwordValidation}>
-                Pasword is atleast 6 characters{" "}
-                <i class={passwordValidationIcon}></i>
-              </li>
-              <li className={verifyPasswordValidation}>
-                Password match <i class={verifyPasswordValidationIcon}></i>
-              </li>
-            </ul>
-          </Container>
-        </div>
+            </div>
+            {registerBtn ? (
+              <Button type="submit" className="ml-3 register-btn">
+                Submit
+              </Button>
+            ) : (
+              <Button
+                type="submit"
+                className="ml-3 register-btn"
+                disabled={true}
+              >
+                Submit
+              </Button>
+            )}
+            <small className="mt-md-3 ml-md-3 d-block register-text">
+              Already have an account? <Link to="/login">Log in Account</Link>{" "}
+            </small>
+          </Form>
+
+          <ul className="register-validation">
+            <li className={emailValidation}>
+              Email unique <i class={emailValidationIcon}></i>
+            </li>
+            <li className={userNameValidation}>
+              Username unique <i class={userNameValidationIcon}></i>{" "}
+            </li>
+            <li className={passwordValidation}>
+              Pasword is atleast 6 characters{" "}
+              <i class={passwordValidationIcon}></i>
+            </li>
+            <li className={verifyPasswordValidation}>
+              Password match <i class={verifyPasswordValidationIcon}></i>
+            </li>
+          </ul>
+        </Container>
       </div>
     </>
   );
