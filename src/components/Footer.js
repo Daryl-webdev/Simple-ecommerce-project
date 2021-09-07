@@ -66,7 +66,7 @@ function Footer() {
               alt="lazada logo"
             />
             <div className="download-container">
-              <p>Go where your heart beats</p>
+              <p className="footer-motto">Go where your heart beats</p>
               <p className="footer-heading">Download the App</p>
             </div>
             <div>

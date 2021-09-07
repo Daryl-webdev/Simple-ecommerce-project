@@ -200,9 +200,9 @@ const Login = () => {
   }
   return (
     <Container className="login-div">
-      <Row>
-        <Col className="col-7">
-          <Form onSubmit={(e) => loginUser(e)}>
+      <div className="row">
+        <div className="col-md-7">
+          <Form className="login-form" onSubmit={(e) => loginUser(e)}>
             <Form.Group>
               <Form.Label for="loginEmail"> Email/Username*</Form.Label>
               <Form.Control
@@ -226,9 +226,11 @@ const Login = () => {
               />
             </Form.Group>
             {loginBtn ? (
-              <Button type="submit">Login</Button>
+              <Button className="login-btn" type="submit">
+                Login
+              </Button>
             ) : (
-              <Button type="submit" disabled="true">
+              <Button className="login-btn" type="submit" disabled="true">
                 Login
               </Button>
             )}
@@ -237,8 +239,8 @@ const Login = () => {
               Waley ka account? <Link to="/register">Create account</Link>{" "}
             </small>
           </Form>
-        </Col>
-        <Col className="col-5">
+        </div>
+        <div className="col-md-5 google-btn-wrapper ">
           <div className="google-btn-div">
             <GoogleLogin
               clientId="179012172148-9ro5ak1uts4dt5frs1oeer1j34ntuega.apps.googleusercontent.com"
@@ -251,13 +253,12 @@ const Login = () => {
             <FacebookLogin
               appId="1045988489507953"
               autoLoad={false}
-              cssClass="my-facebook-button-class"
-              icon="fa-facebook"
+              cssClass="my-facebook-button"
               callback={responseFacebook}
             />
           </div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </Container>
   );
 };

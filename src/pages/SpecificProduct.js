@@ -39,7 +39,6 @@ export default function SpecificProduct() {
     fetch(`${process.env.REACT_APP_API_URL}/products/${productId}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setName(data.name);
         setDescription(data.description);
         setPrice(data.price);

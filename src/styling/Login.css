@@ -1,1 +1,103 @@
+@media all and (max-width: 1440px) {
+  .login-close-btn {
+    display: none;
+  }
+  .my-facebook-button {
+    padding: 0.5rem 0.6rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px 1px grey;
+  }
+}
+@media all and (max-width: 1024px) {
+  .login-close-btn {
+    display: none;
+  }
+  .my-facebook-button {
+    padding: 0.5rem 0.6rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px 1px grey;
+  }
+}
 
+@media all and (max-width: 768px) {
+  .login-close-btn {
+    position: relative;
+    left: 2rem;
+    top: 0.5rem;
+    display: inline;
+    color: hsl(0, 0%, 50%);
+  }
+  .login-div {
+    max-width: 700px;
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .my-facebook-button {
+    padding: 0.5rem 0.6rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px 1px grey;
+  }
+
+  .login-welcome {
+    margin: 1rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .login-wrapper {
+    padding: 0;
+    background-color: white;
+    max-height: 100vh;
+  }
+  .login-navbar {
+    display: none;
+  }
+}
+@media all and (max-width: 425px) {
+  .login-close-btn {
+    position: relative;
+    left: 1rem;
+    top: 0.5rem;
+    display: inline;
+    color: hsl(0, 0%, 50%);
+  }
+  .login-welcome {
+    margin: 1rem 0 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .login-navbar {
+    display: none;
+  }
+  .login-div {
+    max-width: 400px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .my-facebook-button {
+    padding: 0.5rem 0.6rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+  }
+  .login-wrapper {
+    padding: 0;
+    background-color: white;
+    max-height: 80vh;
+  }
+  .google-btn-div {
+    margin-top: 3rem;
+  }
+}

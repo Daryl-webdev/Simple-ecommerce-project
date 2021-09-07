@@ -66,3 +66,23 @@ li {
   font-size: 0.8rem;
   line-height: 5px;
 }
+
+/* media query */
+@media all and (max-width: 1024px) {
+  .footer-motto {
+    font-size: 0.8rem;
+  }
+  .footer-heading {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .footer-container {
+    display: none;
+  }
+}
+@media all and (max-width: 425px) {
+  .footer-container {
+    display: none;
+  }
+}
