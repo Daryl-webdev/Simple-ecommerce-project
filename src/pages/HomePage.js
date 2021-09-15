@@ -13,7 +13,9 @@ function HomePage() {
           </Link>
         </div>
       </div>
-      <Carousel />
+      <div className="d-sm-none d-md-block">
+        <Carousel />
+      </div>
     </div>
   );
 }

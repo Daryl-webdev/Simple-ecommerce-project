@@ -29,7 +29,7 @@ function Footer() {
           </ul>
         </div>
         <div className="col-md-3">
-          <p className="footer-heading">App name here</p>
+          <p className="footer-heading">Pazada App</p>
           <ul>
             <li>
               <a href="https://www.google.com">About this app</a>

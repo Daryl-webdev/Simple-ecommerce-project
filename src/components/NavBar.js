@@ -36,7 +36,9 @@ export default function NavBar() {
             <Nav.Link className="nav-link" as={NavLink} to="/my-cart">
               <i class="fas fa-shopping-cart">
                 {" "}
-                <span className="badge cart-count">{count}</span>
+                <span className="badge cart-count">
+                  {count > 0 ? count : ""}
+                </span>
               </i>
             </Nav.Link>
           </>

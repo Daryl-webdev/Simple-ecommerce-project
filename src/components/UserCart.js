@@ -11,12 +11,14 @@ export default function UserCart({
   const [mainDisplay, setMainDisplay] = useState("");
 
   useEffect(() => {
-    if (cartData.error) {
+    if (cartData.error || cartData.length === 0) {
+      console.log(cartData);
       setDisplay("d-block no-order-container");
       setMainDisplay("");
+      setCarts([]);
     } else {
       setMainDisplay("d-flex flex-column");
-      setDisplay("");
+      setDisplay("d-none");
       const cartArr = cartData.map((cart) => {
         if (cart !== null) {
           return (
