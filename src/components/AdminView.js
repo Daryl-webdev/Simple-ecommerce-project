@@ -103,7 +103,7 @@ export default function AdminView(props) {
       fd.append("description", description);
       fd.append("price", price);
       fd.append("category", category);
-      const url = "http://localhost:4000/products/add";
+      const url = `${process.env.REACT_APP_API_URL}/products/add`;
       const config = {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
