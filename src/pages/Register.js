@@ -174,6 +174,7 @@ const Register = () => {
   //==================registration form function==========================
   function registerUser(e) {
     e.preventDefault();
+    console.log('test',process.env.REACT_APP_API_URL)
     fetch(`${process.env.REACT_APP_API_URL}/users/register`, {
       method: "POST",
       headers: {
